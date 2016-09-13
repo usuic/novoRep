@@ -29,6 +29,11 @@ public class PreencheBanco {
 		Estabelecimento estabelecimento = new Estabelecimento();
 		estabelecimento.setNome("Casa de shows");
 		estabelecimento.setEndereco("Rua dos Silveiras, 12345");
+		
+		Estabelecimento estabelecimento2 = new Estabelecimento();
+		estabelecimento2.setNome("Cinema 1");
+		estabelecimento2.setEndereco("Av Ana Costa, 15");
+
 
 		Espetaculo espetaculo = new Espetaculo();
 		espetaculo.setEstabelecimento(estabelecimento);
@@ -36,6 +41,7 @@ public class PreencheBanco {
 		espetaculo.setTipo(TipoDeEspetaculo.SHOW);
 
 		manager.persist(estabelecimento);
+		manager.persist(estabelecimento2);
 		manager.persist(espetaculo);
 
 		for (int i = 0; i < 10; i++) {
